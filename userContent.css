@@ -1,0 +1,120 @@
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+  browser[type="content-primary"] {
+    background: #24273a !important;
+  }
+}
+
+@-moz-document url("about:newtab"), url("about:home"), url("about:blank"), url("about:support"), url("about:config"), url("about:preferences") {
+  :root {
+    --in-content-page-background: #24273a !important;
+  }
+  body,
+  html,
+  #newtab-customize-overlay {
+    background-color: #24273a !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --in-content-page-background: #24273a !important;
+    }
+    body,
+    html,
+    #newtab-customize-overlay {
+      background-color: #24273a !important;
+    }
+  }
+}
+
+@-moz-document url("about:preferences") {
+  .sticky-container {
+    background-color: #24273a !important;
+  }
+}
+
+@-moz-document url("about:home") {
+  :root {
+    --newtab-text-primary-color: #cad3f5 !important;
+    --newtab-primary-action-background: #a6da95 !important;
+    --newtab-primary-element-text-color: #181926 !important;
+    --newtab-element-secondary-color: #494d64 !important;
+    --newtab-border-color: #6e738d !important;
+    --newtab-element-hover-color: #2f3347 !important;
+    --newtab-background-color-secondary: #494d64 !important;
+  }
+
+  .icon-settings {
+    color: #8087a2 !important;
+    display: none !important;
+  }
+
+  .customize-menu {
+    background-color: #1e2030 !important;
+  }
+
+  .non-collapsible-section {
+    display: none !important;
+  }
+}
+
+@-moz-document url(moz-extension://2beedd36-8b41-4ad9-bf44-56cc9ae18b69/onetab.html),
+url(moz-extension://2beedd36-8b41-4ad9-bf44-56cc9ae18b69/options.html),
+url(moz-extension://2beedd36-8b41-4ad9-bf44-56cc9ae18b69/import-export.html)
+{
+  :root {
+    --link-color: #a6da95 !important;
+    --text-color: #cad3f5 !important;
+    --text-color-weak: #8087a2 !important;
+    --text-color-em: #cad3f5 !important;
+    --bg-color: #24273a !important;
+    --border-color: #6e738d !important;
+    --shadow-color: red !important;
+    --dash-color: #6e738d !important;
+    --popup-color: #363a4f;
+  }
+  
+  #contentAreaDiv .clickable::after {
+    position: relative;
+    bottom: 2px;
+    display: block;
+    content: "";
+    background-color: var(--link-color);
+    width: 0;
+    height: 1px;
+    transition: width 0.2s ease-out;
+    margin-bottom: -19px;
+  }
+  
+   #contentAreaDiv .clickable:hover::after {
+    width: 100%;
+  }
+  
+  .clickable.moreButton > div {
+    background-color: var(--popup-color) !important;
+    border-radius: 0.25rem;
+    box-shadow: none !important;
+  }
+    
+  textarea {
+    width: 100% !important;
+    height: 16rem !important;
+    overflow: clip;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    resize: none;
+  }
+
+  textarea:focus {
+    border-color: transparent;
+    outline: 2px solid var(--link-color) !important;
+    outline-offset: -1px;
+  }
+}
+
+@-moz-document url(moz-extension://2beedd36-8b41-4ad9-bf44-56cc9ae18b69/import-export.html) {
+  #contentAreaDiv div:last-of-type {
+    padding-right: 32px;
+  }
+}

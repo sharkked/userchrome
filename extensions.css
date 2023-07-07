@@ -1,0 +1,35 @@
+@import url("extensions/600-sound.css");
+@import url("extensions/javascript-switcher.css");
+@import url("extensions/onetab.css");
+@import url("extensions/ublock-origin.css");
+
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml)
+{
+  /*  
+   Hide Extension Name in the identity area unless
+   hovered for half a second
+  */
+  #identity-box.extensionPage #identity-icon-box {
+    max-width: 28px !important;
+    padding: 0 6px !important;
+    overflow: hidden;
+    background-color: transparent !important;
+    transition: max-width 250ms ease-in-out;
+  }
+  #identity-box.extensionPage:hover #identity-icon-box {
+    max-width: calc(30px + 13em) !important;
+    background-color: var(--urlbar-box-hover-bgcolor) !important;
+    transition: max-width 250ms ease-in-out 500ms;
+  }
+  #identity-box.extensionPage #identity-icon-labels,
+  #identity-box.extensionPage #identity-icon-label {
+    padding-right: 2px !important;
+    visibility: collapse !important;
+    transition: visibility 250ms ease-in-out;
+  }
+  #identity-box.extensionPage:hover #identity-icon-labels,
+  #identity-box.extensionPage:hover #identity-icon-label {
+    visibility: visible !important;
+    transition: visibility 250ms ease-in-out 500ms;
+  }
+}

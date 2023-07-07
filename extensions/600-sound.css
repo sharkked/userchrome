@@ -1,0 +1,19 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml)
+{
+  #_c4b582ec-4343-438c-bda2-2f691c16c262_-BAP {
+    --icon-svg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiPjxwYXRoIGQ9Ik0yLDUuOTlhMiwyLDAsMCwwLTIsMnY4LjAxNGEyLDIsMCwwLDAsMiwySDQuOEwxMiwyNFYwTDQuOCw1Ljk5Wm04LTEuNzIyVjE5LjcyOUw1LjUyNSwxNi4wMDdIMlY3Ljk5M0g1LjUyNVoiLz48cGF0aCBkPSJNMjAsMTJhNS4wMDksNS4wMDksMCwwLDAtNS01LjAwOEgxNHYyaDFhMy4wMDUsMy4wMDUsMCwwLDEsMCw2LjAxSDE0djJoMUE1LjAxLDUuMDEsMCwwLDAsMjAsMTJaIi8+PHBhdGggZD0iTTE1LDIuOTg1SDE0djJoMWE3LjAxMiw3LjAxMiwwLDAsMSwwLDE0LjAyNEgxNHYyaDFhOS4wMTUsOS4wMTUsMCwwLDAsMC0xOC4wM1oiLz48L3N2Zz4=");
+
+    --webextension-menupanel-image: var(--icon-svg) !important;
+    --webextension-menupanel-image-light: var(--icon-svg) !important;
+    --webextension-menupanel-image-dark: var(--icon-svg) !important;
+    --webextension-menupanel-image-2x: var(--icon-svg) !important;
+    --webextension-menupanel-image-2x-light: var(--icon-svg) !important;
+    --webextension-menupanel-image-2x-dark: var(--icon-svg) !important;
+    --webextension-toolbar-image: var(--icon-svg) !important;
+    --webextension-toolbar-image-light: var(--icon-svg) !important;
+    --webextension-toolbar-image-dark: var(--icon-svg) !important;
+    --webextension-toolbar-image-2x: var(--icon-svg) !important;
+    --webextension-toolbar-image-2x-light: var(--icon-svg) !important;
+    --webextension-toolbar-image-2x-dark: var(--icon-svg) !important;
+  }
+}
